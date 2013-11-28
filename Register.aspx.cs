@@ -16,6 +16,7 @@ public partial class Register : System.Web.UI.Page
     {   
         MembershipCreateStatus status;
         Membership.CreateUser(CreateUserWizard1.UserName, CreateUserWizard1.Password, CreateUserWizard1.Email, CreateUserWizard1.Question, CreateUserWizard1.Answer, true, out status);
+        
     }
 
 

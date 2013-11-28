@@ -60,6 +60,7 @@ Welcome to Psychology Research Methods
         <asp:Login ID="Login1" CssClass =" formStyle" runat="server" OnAuthenticate="Login1_Authenticate1" Height="221px" Width="300px">
         </asp:Login>
     </div>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     </form>
 </body>
 </html>

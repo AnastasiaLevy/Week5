@@ -43,7 +43,7 @@
             position:relative;
             opacity:1;
             background-color:#bef1f7;
-            box-shadow:10px 10px 10px gray;
+            box-shadow:10px 10px 10px #394df6;
      
         }
 
@@ -72,6 +72,8 @@
             -o-transform: scale(1.3, 1.3);
             box-shadow:13px 13px 13px gray;
             background-color:#dff3f6;
+            
+
            
         }
          h2 {
@@ -79,6 +81,28 @@
         color: blue;
         text-align:center;
     }
+        .button {
+            margin-top: 280px;
+            background-color:#649ab6;
+            border:double blue;
+            text-shadow:5px 5px 5px black;
+            
+            
+        }
+            .button:hover {
+                transform: scale(1.3, 1.3);
+                -moz-transform: scale(1.3, 1.3);
+                -ms-transform: scale(1.3, 1.3);
+                -webkit-transform: scale(1.3, 1.3);
+                -o-transform: scale(1.3, 1.3);
+                box-shadow: 13px 13px 13px gray;
+                background-color: #dff3f6;
+                font: 20px;
+            }
+        .done {
+            background-color: purple;
+            margin-left:0px;
+        }
         
     </style>
 </head>
@@ -86,8 +110,8 @@
     <h2>
 Welcome to Psychology Research Methods
    </h2>
+    
     <form id="main" runat="server">
-   
     <div id="1" class="style1">
         <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style1" placeholder="Enter your First Name" ></asp:TextBox>
         <br />
@@ -103,10 +127,14 @@ Welcome to Psychology Research Methods
             <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ReturnList" TypeName="BusinessLayer"></asp:ObjectDataSource>
             
          </div>
+        
         <div id="3" class ="style1">
             
-        <img src="Images/imageplaceh.jpg" class="auto-style2" /> <input id="File1" type="file" /></div>
-    
+        <img src="Images/imageplaceh.jpg" class="auto-style2" /> <input id="File1" type="file" <asp:Label ID="Label1" runat="server" Text="Not done yet"></asp:Label></div>
+        
+        <asp:Button ID="Button1" class="button" runat="server" Text="Submit" OnClick="Button1_Click" />
+       
         </form>
+    
 </body>
 </html>
